@@ -1,0 +1,12 @@
+.form-control{
+    height: 45px;
+    background-color: var(--bg-th)!important;
+    color:var(--text)!important;
+    border-radius: 0 !important;
+    border: none !important;
+    border-bottom: 3px solid var(--text)!important;
+    outline: 0!important;
+}
+.form-control::placeholder{
+    color: var(--text)!important;
+}

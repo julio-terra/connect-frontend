@@ -1,0 +1,15 @@
+.bt{
+    background-color: var(--bg-th) !important;
+    border-color: var(--bg-th);
+    width: 100%;
+    height: 45px;
+    position: relative;
+}
+.bt:hover,
+.bt:active{
+    border-color: var(--bg-th);
+}
+.bt i{
+    position: absolute;
+    left: 5%;
+}

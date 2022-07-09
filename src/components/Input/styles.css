@@ -4,7 +4,7 @@
     color:var(--text)!important;
     border-radius: 0 !important;
     border: none !important;
-    border-bottom: 3px solid var(--text)!important;
+    border-bottom: 2.5px solid var(--text)!important;
     outline: 0!important;
 }
 .form-control::placeholder{

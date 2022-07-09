@@ -1,0 +1,17 @@
+.user__component .img{
+    width: 50px;
+}
+.user__component strong{
+    font-size: 15px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.user__component .btn{
+    width: 100px;
+    height: 35px;
+    font-size: 15px!important;
+    background-color: var(--bg-th);
+    border-radius: 15px;
+}

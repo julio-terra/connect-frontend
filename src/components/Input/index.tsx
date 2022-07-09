@@ -3,19 +3,23 @@ import React from 'react';
 import './styles.css';
 
 type props = {
-    loading?: Boolean;
+    className?:String;
     name?: String;
     type?: string;
-    placeholder?: String
-
+    placeholder?: String;
+    set: React.Dispatch<React.SetStateAction<string>>
+    value?: string;
 }
-const Input: React.FC<props> = ({loading, name, type, placeholder}) => {
+const Input: React.FC<props> = ({className, name, type, placeholder, value, set}) => {
   return (
     <input
-      className="form-control mt-3"
+      className={`form-control ${className}`}
       name={`${name}`} 
       type={`${type}`}
       placeholder={`${placeholder}`}
+      required
+      value={value}
+      onChange={e => set(e.target.value)}
     />
   )
 }

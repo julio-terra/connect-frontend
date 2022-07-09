@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '@mdi/react';
 
 import './styles.css';
 
@@ -7,23 +8,23 @@ type props = {
     text: String;
     onClick?: () => void;
     icon?: string;
-
+    className?: String;
 }
-const Button: React.FC<props> = ({loading , text, onClick, icon}) => {
+const Button: React.FC<props> = ({loading, className, text, onClick, icon}) => {
   if(!loading){
     return (
-      <button className="btn bt mt-3" type="submit" onClick={onClick}>
+      <button className={`btn bt ${className}`} type="submit" onClick={onClick}>
         {text}
         {
           icon && (
-            <i className="icon"/>
+            <Icon path={icon} size={1}/>
           )
         }
       </button>
     )
   }else{
     return(
-      <button className="btn bt mt-3" type="button" onClick={() => false}>
+      <button className={`btn bt ${className}`} type="button" onClick={() => false}>
          <span className="spinner-border spinner-border-sm" />
       </button>
     )

@@ -1,0 +1,10 @@
+.right__side a > span{
+    font-size: 24px;
+    font-weight: 500;
+}
+.right__side a > svg{
+    margin-right: 20px;
+}
+.right__side a:focus{
+    font-weight: bold;
+}

@@ -1,13 +1,23 @@
 import React from 'react';
-import SignIn from './pages/SignIn';
+import Routes from './routes/index';
+import { ToastContainer } from 'react-toastify';
+import { AuthProvider } from './hooks/auth';
 
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/globalStyles.css';
+import { HeaderProvider } from './hooks/header';
 
 
 const App: React.FC = () => {
   return (
-    <SignIn />
+    <AuthProvider>
+      <HeaderProvider>
+      <>
+        <ToastContainer />
+        <Routes />
+      </>
+      </HeaderProvider>
+    </AuthProvider>
   );
 }
 

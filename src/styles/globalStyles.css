@@ -34,8 +34,9 @@ body, input, button {
   font: 14px 'Roboto', sans-serif !important;
   color: var(--text) !important;
 }
-a{
+a, a:hover, a:active{
   text-decoration: none;
+  color: var(--text);
 }
 ul{
   list-style: none;

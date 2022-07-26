@@ -1,0 +1,36 @@
+.new__comment {
+    border-radius: 5px;
+    background-color: var(--bg-tw);
+}
+
+.new__comment input[type="text"]{
+    background-color: transparent!important;
+}
+input[type=file]{
+    font-size: 0px!important;
+}
+input[type=file]::-webkit-file-upload-button {
+    font-size: 14px!important;
+    color: white;
+    border: none;
+    background: var(--bg-th);
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 3px;
+    height: 35px;
+}
+
+.new__comment .img{
+    width: 100%;
+    background-color: var(--bg-th);
+    overflow: hidden;
+    position: relative;
+}
+.mdi__close{
+    width: 24px;
+    position: absolute;
+    top: min(5px, 5%);
+    right: min(5px, 5%);
+    color: var(--bg-tw);
+    cursor: pointer;
+}

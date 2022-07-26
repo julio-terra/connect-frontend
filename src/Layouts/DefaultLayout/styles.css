@@ -1,0 +1,10 @@
+.default__layout{
+    max-height: calc(100vh - 70px);
+}
+.default__layout .mid{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    display: none;
+}

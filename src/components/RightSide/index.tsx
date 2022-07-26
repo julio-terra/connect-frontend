@@ -5,7 +5,8 @@ import {
   mdiEmailOutline,
   mdiFaceManOutline, 
   mdiHomeOutline,
-  mdiTagSearchOutline 
+  mdiTagSearchOutline,
+  mdiExitToApp
 } from '@mdi/js';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/auth';
@@ -14,7 +15,7 @@ import './styles.css';
 
 
 const RightSide: React.FC = () => {
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
   return (
     <div className="col-12 right__side">
       <ul>
@@ -30,7 +31,7 @@ const RightSide: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link to={`/user/profile/${user._id}`} className="d-flex mt-3">
+          <Link to={`/user/${user._id}/profile`} className="d-flex mt-3">
             <Icon
               path={mdiFaceManOutline}
               size={1.2}
@@ -70,6 +71,17 @@ const RightSide: React.FC = () => {
             />
             <span>
               Settings
+            </span>
+          </Link>
+        </li>
+        <li onClick={() => signOut()}>
+          <Link to="/settings" className="d-flex mt-3">
+            <Icon
+              path={mdiExitToApp}
+              size={1.1}
+            />
+            <span>
+              Sign out
             </span>
           </Link>
         </li>

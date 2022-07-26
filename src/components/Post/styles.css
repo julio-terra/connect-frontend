@@ -1,0 +1,24 @@
+.post{
+    background: var(--bg-tw);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.post .user .img{
+    width: 45px;
+    max-height: 50px;
+    overflow: hidden;
+}
+.post .user h1{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.post .content .img{
+    width: 100%;
+    background-color: var(--bg-th);
+    overflow: hidden;
+}
+.post .content h1{
+    font-size: 24px;
+    font-weight: 400;
+}

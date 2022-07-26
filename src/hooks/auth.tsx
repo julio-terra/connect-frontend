@@ -11,7 +11,9 @@ type TAuthContext = {
   signUp(displayName: String, email: String, password: String): void;
   signed: boolean;
   signOut: () => void;
-  updateUserName(user_id: String, userName: String): void
+  updateUserName(user_id: String, userName: String): void;
+  follow(_id: String, target_id: String): void;
+  unfollow(_id: String, target_id: String): void;
 }
 
 type TAuthProvider = {
@@ -36,9 +38,6 @@ const AuthProvider: React.FC<TAuthProvider> = ({children}) => {
     if(!token){
       return false
     }
-    console.log(
-      !isExpired(token)
-    )
     return !isExpired(token)
   })
   const [loading, setLoading] = useState<boolean>(false);
@@ -85,8 +84,22 @@ const AuthProvider: React.FC<TAuthProvider> = ({children}) => {
     setUser(response.data.user);
     return toast.success(response.data.message);
   }
+  const follow = async (_id: String, target_id: String) => {
+    const response = await api.put(`/users/follow/${_id}`, { target_id });
+
+    if(response.data.error){
+      toast.error(response.data.message)
+    }
+  }
+  const unfollow = async (_id: String, target_id: String) => {
+    const response = await api.put(`/users/unfollow/${_id}`, { target_id });
+
+    if(response.data.error){
+      toast.error(response.data.message)
+    }
+  }
   return (
-    <AuthContext.Provider value={{ user, loading, signIn, signUp, signed, signOut, updateUserName}}>
+    <AuthContext.Provider value={{ user, loading, signIn, signUp, signed, signOut, updateUserName, follow, unfollow}}>
       {children}
     </AuthContext.Provider>
   )

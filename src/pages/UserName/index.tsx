@@ -14,7 +14,7 @@ const UserName: React.FC = () => {
 
   const onSubmit = () => updateUserName(user._id || '', userName);
   return (
-    <form action="submit" className="col-12 col-md-10 col-lg-8 col-xl-5" onSubmit={handleSubmit(onSubmit)}>
+    <form action="submit" className="col-12 col-md-10 col-lg-8 col-xl-6" onSubmit={handleSubmit(onSubmit)}>
       <h3>Hello {user.displayName}! <br /> almost there... please add your unique username.</h3>
       <Input
         name="userName"

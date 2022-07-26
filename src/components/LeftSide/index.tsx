@@ -24,7 +24,7 @@ const LeftSide: React.FC = () => {
     <div className="col-12">
       {
           users?.users?.map((e, i) => (
-            i <= 17 && i >= 10 && (
+            i <= 7 && (
               <User
                 userName={e.userName}
                 _id={e._id}

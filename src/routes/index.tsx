@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useAuth } from "../hooks/auth";
 
@@ -7,13 +6,12 @@ import DefaultLayout from "../Layouts/DefaultLayout";
 import Sigin from '../pages/SignIn';
 import SignUp from "../pages/SignUp";
 import UserName from '../pages/UserName'
+import Home from "../pages/Home";
 import User from "../pages/User";
+import Post from "../pages/Post";
   
 const CRoutes = () => {
-  /* useEffect(() =>{
-    signOut();
-  }, []) */
-  const { signed, user, signOut } = useAuth();
+  const { signed, user } = useAuth();
   if(!signed){
     return(
       <BrowserRouter>
@@ -38,8 +36,10 @@ const CRoutes = () => {
         <BrowserRouter>
           <DefaultLayout>
             <Routes>
-              <Route path='*' element={<h1></h1>} />
-              <Route path="/user/:id" element={<User />} />
+              <Route path='*' element={<Navigate to="/" />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/user/:id/profile" element={<User />} />
+              <Route path="/user/:user_id/post/:id" element={<Post />} />
             </Routes>
           </DefaultLayout>
         </BrowserRouter>

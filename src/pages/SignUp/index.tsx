@@ -26,7 +26,7 @@ const SignUp: React.FC = () => {
   
   const { signUp, loading } = useAuth();
   return (
-    <form action="submit" className="col-12 col-md-10 col-lg-8 col-xl-5" onSubmit={handleSubmit(onSubmit)}>
+    <form action="submit" className="col-12 col-md-10 col-lg-8 col-xl-6" onSubmit={handleSubmit(onSubmit)}>
       <div className="signup__logo">
         <img 
           src={ILogo}

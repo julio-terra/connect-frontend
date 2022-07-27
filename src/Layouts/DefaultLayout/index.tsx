@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../components/Header';
 import LeftSide from '../../components/LeftSide';
 import RightSide from '../../components/RightSide';
+import Tabs from '../../components/Tabs';
 
 import './styles.css';
 
@@ -24,6 +25,7 @@ const DefaultLayout: React.FC<props> = ({children}) => {
           <RightSide />
         </div>
       </div>
+      <Tabs />
     </>
   )
 }

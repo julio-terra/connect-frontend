@@ -25,7 +25,7 @@ const RightSide: React.FC = () => {
               path={mdiHomeOutline}
               size={1.3}
             />
-            <span>
+            <span className='d-none d-lg-flex'>
               Homepage
             </span>
           </Link>
@@ -36,7 +36,7 @@ const RightSide: React.FC = () => {
               path={mdiFaceManOutline}
               size={1.2}
             />
-            <span>
+            <span className='d-none d-lg-flex'>
               Profile
             </span>
           </Link>
@@ -47,7 +47,7 @@ const RightSide: React.FC = () => {
               path={mdiTagSearchOutline}
               size={1.2}
             />
-            <span>
+            <span className='d-none d-lg-flex'>
               Explore
             </span>
           </Link>
@@ -58,7 +58,7 @@ const RightSide: React.FC = () => {
               path={mdiEmailOutline}
               size={1.2}
             />
-            <span>
+            <span className='d-none d-lg-flex'>
               Messages
             </span>
           </Link>
@@ -69,7 +69,7 @@ const RightSide: React.FC = () => {
               path={mdiApplicationSettingsOutline}
               size={1.1}
             />
-            <span>
+            <span className='d-none d-lg-flex'>
               Settings
             </span>
           </Link>
@@ -80,7 +80,7 @@ const RightSide: React.FC = () => {
               path={mdiExitToApp}
               size={1.1}
             />
-            <span>
+            <span className='d-none d-lg-flex'>
               Sign out
             </span>
           </Link>

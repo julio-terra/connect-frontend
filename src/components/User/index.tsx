@@ -20,19 +20,17 @@ type Tuser = {
 
 const User: React.FC<props> = ({avatar, userName, _id}) => {
   const location = useLocation();
-  const [loading, setLoading] = useState<Boolean>(false)
+  const [loading, setLoading] = useState<Boolean>(true)
   const { user, follow, unfollow } = useAuth()
-  const [me, setMe] = useState<Tuser>()
   const [isFollowing, setIsFollowing] = useState<Tfollower[]>();
 
   const fetchData = async () => {
     setLoading(true)
     const response = await api.get(`/users/user/${_id}`);
-    setIsFollowing(response.data.user.followers.filter((e: Tfollower) => e._id === user._id));
-    setMe(response.data.user);
+    setIsFollowing(response.data.user.followers.filter((e: Tfollower) => e._id === user._id))
     setTimeout(() =>{
       setLoading(false)
-    }, 250)
+    }, 500)
   }
   useEffect(() =>{
     fetchData()
